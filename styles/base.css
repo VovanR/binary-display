@@ -1,0 +1,121 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 2em;
+  font-family: monospace;
+  max-width: 1024px;
+}
+
+
+.app {
+}
+
+.app__title {
+  margin-top: 0;
+  margin-bottom: 0.67em;
+}
+
+.app__content {
+  margin-bottom: 25px;
+}
+
+.app__content .binary-time-display-item {
+  --segment-size: 50px;
+}
+
+
+
+
+button,
+input,
+textarea {
+  font-family: inherit;
+}
+
+
+
+
+.binary-time-display-item {
+  --segment-size: 1em;
+  --segment-background-color: silver;
+  --segment-color: var(--segment-background-color);
+
+  --segment-active-flash-background-color: hsla(185, 98%, 48%, 1);
+  --segment-active-flash-color: hsla(185, 98%, 15%, 1);
+
+  --segment-active-background-color: hsla(200, 98%, 48%, 1);
+  --segment-active-color: hsla(200, 98%, 15%, 1);
+
+  display: inline-flex;
+  flex-direction: row;
+  font-size: var(--segment-size);
+  cursor: default;
+}
+
+.binary-time-display-item__column {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.binary-time-display-item__segment {
+  color: var(--segment-color);
+  background-color: var(--segment-background-color);
+  border-radius: 50%;
+  width: var(--segment-size);
+  height: var(--segment-size);
+  margin: 0.15em;
+
+  font-family: monospace;
+  font-size: 0.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: background-color 0.15s ease, color 0.15s ease, transform 0.3s ease;
+}
+
+.binary-time-display-item__segment--active {
+  color: var(--segment-active-color);
+  background-color: var(--segment-active-background-color);
+
+  transition: none;
+  transform: scale(1.1);
+
+  animation: activeIn 0.75s;
+}
+
+@keyframes activeIn {
+  from {
+    color: var(--segment-active-flash-color);
+    background-color: var(--segment-active-flash-background-color);
+  }
+
+  to {
+    color: var(--segment-active-color);
+    background-color: var(--segment-active-background-color);
+  }
+}
+
+
+.binary-time-display-item--no-digit {
+  --segment-color: transparent;
+  --segment-active-flash-color: transparent;
+  --segment-active-color: transparent;
+}
+
+
+#input {
+  width: 4em;
+  margin-bottom: 1em;
+}
