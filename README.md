@@ -3,8 +3,6 @@
 [![XO code style][codestyle-image]][codestyle-url]
 
 [![Build Status][travis-image]][travis-url]
-[![Dependency Status][depstat-image]][depstat-url]
-[![DevDependency Status][depstat-dev-image]][depstat-dev-url]
 
 > Binary display
 
@@ -29,9 +27,3 @@ MIT © [Vladimir Rodkin](https://github.com/VovanR)
 
 [travis-url]: https://travis-ci.org/VovanR/binary-display
 [travis-image]: https://img.shields.io/travis/VovanR/binary-display.svg?style=flat-square
-
-[depstat-url]: https://david-dm.org/VovanR/binary-display
-[depstat-image]: https://david-dm.org/VovanR/binary-display.svg?style=flat-square
-
-[depstat-dev-url]: https://david-dm.org/VovanR/binary-display
-[depstat-dev-image]: https://david-dm.org/VovanR/binary-display/dev-status.svg?style=flat-square
